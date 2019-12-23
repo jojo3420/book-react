@@ -7,7 +7,7 @@ class LikeButton extends React.Component {
     const text = this.state.liked ? '좋아요 취소' : '좋아요';
     return React.createElement(
       'button',
-      { onClick: () => this.setState({ liked: true }) },
+      { onClick: () => this.setState({ liked: !this.state.liked }) },
       text,
     );
   }
